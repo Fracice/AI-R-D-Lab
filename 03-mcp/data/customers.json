@@ -1,0 +1,26 @@
+[
+  {
+    "customer": "Alfa S.r.l.",
+    "industry": "Technology",
+    "city": "Milan",
+    "contact": "alfa@example.com"
+  },
+  {
+    "customer": "Beta S.p.A.",
+    "industry": "Manufacturing",
+    "city": "Turin",
+    "contact": "beta@example.com"
+  },
+  {
+    "customer": "Gamma S.r.l.",
+    "industry": "Retail",
+    "city": "Rome",
+    "contact": "gamma@example.com"
+  },
+  {
+    "customer": "Delta S.p.A.",
+    "industry": "Logistics",
+    "city": "Bologna",
+    "contact": "delta@example.com"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "order_id": 1001,
+    "customer": "Alfa S.r.l.",
+    "product": "Laptop Pro",
+    "quantity": 5,
+    "total": 5000,
+    "status": "Shipped"
+  },
+  {
+    "order_id": 1002,
+    "customer": "Beta S.p.A.",
+    "product": "Monitor 27\"",
+    "quantity": 12,
+    "total": 3600,
+    "status": "Processing"
+  },
+  {
+    "order_id": 1003,
+    "customer": "Gamma S.r.l.",
+    "product": "Keyboard",
+    "quantity": 30,
+    "total": 2100,
+    "status": "Delivered"
+  },
+  {
+    "order_id": 1004,
+    "customer": "Delta S.p.A.",
+    "product": "Laptop Pro",
+    "quantity": 8,
+    "total": 8000,
+    "status": "Pending"
+  }
+]

@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+
+# Python virtual environments
+.venv/
+03-mcp/.venv/
