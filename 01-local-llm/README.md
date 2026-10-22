@@ -37,7 +37,7 @@ The experiment focuses on:
 
 The model correctly identified itself as Qwen, but incorrectly stated that it was running on Alibaba's cloud infrastructure.
 
-In reality, the model was running locally through Ollama on the user's Mac.
+In reality, Qwen3 8B was running locally through Ollama on a MacBook Air M4.
 
 ### Result
 
@@ -106,7 +106,7 @@ unless an external mechanism provides that capability.
 
 ## 🔐 Security Consideration
 
-The next experiments will **not provide the AI with unrestricted access to the user's computer**.
+The next experiments will **not provide the AI with unrestricted access to the local computer**.
 
 Tools will operate inside controlled environments using synthetic datasets and explicitly defined permissions.
 
@@ -118,7 +118,7 @@ This follows a least-privilege approach: an AI system should only have access to
 
 The next experiment will introduce **Tool Calling**.
 
-Instead of giving the model access to the user's computer, we will create a controlled business dataset and expose a small number of explicitly defined functions to the model.
+Instead of giving the model access to the local computer, a controlled business dataset will be created and a small number of explicitly defined functions will be exposed to the model.
 
 The goal will be to move from:
 
@@ -138,3 +138,4 @@ Result
 LLM
  ↓
 Response
+```
