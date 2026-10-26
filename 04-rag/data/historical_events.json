@@ -1,0 +1,44 @@
+[
+  {
+    "id": "us-election-2024",
+    "date": "2024-11-05",
+    "title": "Elezioni presidenziali statunitensi del 2024",
+    "content": "Donald Trump ha vinto le elezioni presidenziali statunitensi del 5 novembre 2024, sconfiggendo Kamala Harris.",
+    "source": "https://www.fec.gov/introduction-campaign-finance/election-and-voting-information/"
+  },
+  {
+    "id": "mexico-president-2024",
+    "date": "2024-10-01",
+    "title": "Insediamento della presidente del Messico",
+    "content": "Claudia Sheinbaum è entrata in carica come presidente del Messico il 1 ottobre 2024. È la prima donna a ricoprire la carica.",
+    "source": "https://www.gob.mx/presidencia"
+  },
+  {
+    "id": "uk-prime-minister-2024",
+    "date": "2024-07-05",
+    "title": "Keir Starmer diventa primo ministro britannico",
+    "content": "Keir Starmer è diventato primo ministro del Regno Unito il 5 luglio 2024.",
+    "source": "https://www.gov.uk/government/history/past-prime-ministers"
+  },
+  {
+    "id": "germany-chancellor-2025",
+    "date": "2025-05-06",
+    "title": "Friedrich Merz diventa cancelliere tedesco",
+    "content": "Friedrich Merz è stato eletto cancelliere federale tedesco il 6 maggio 2025.",
+    "source": "https://www.bundesregierung.de/"
+  },
+  {
+    "id": "pope-leo-xiv-2025",
+    "date": "2025-05-08",
+    "title": "Elezione di papa Leone XIV",
+    "content": "Robert Francis Prevost è stato eletto papa l'8 maggio 2025 e ha assunto il nome di Leone XIV.",
+    "source": "https://www.vaticannews.va/"
+  },
+  {
+    "id": "pope-francis-death-2025",
+    "date": "2025-04-21",
+    "title": "Morte di papa Francesco",
+    "content": "Papa Francesco è morto il 21 aprile 2025.",
+    "source": "https://www.vaticannews.va/"
+  }
+]
