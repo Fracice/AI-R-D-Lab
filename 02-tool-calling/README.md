@@ -85,7 +85,7 @@ Qwen3 8B runs locally through Ollama.
 
 Its role is to:
 
-- Understand the user's request
+- Understand the request
 - Determine whether a tool is required
 - Select the appropriate tool
 - Generate the required arguments
@@ -319,7 +319,6 @@ The resulting architecture can be represented as:
 │   Qwen3 8B   │
 │    Ollama    │
 └──────┬───────┘
-       │
        │ Tool Call
        ▼
 ┌────────────────────┐
@@ -339,7 +338,6 @@ The resulting architecture can be represented as:
 │ Controlled JSON    │
 │ orders/customers   │
 └─────────┬──────────┘
-          │
           │ Tool Result
           ▼
 ┌──────────────┐
@@ -406,7 +404,7 @@ The function returned the corresponding customer information from the controlled
 
 ### Result
 
-The model successfully selected between multiple available tools according to the user's request.
+The model successfully selected between multiple available tools according to the request.
 
 ---
 
@@ -527,7 +525,7 @@ The Python application controls tool execution through an explicit allowlist.
 
 ## 🔐 Security Consideration
 
-The model was not given unrestricted access to the user's computer.
+The model was not given unrestricted access to the local computer.
 
 The available tools operate only on controlled synthetic datasets.
 
@@ -553,97 +551,3 @@ During the development of this experiment, macOS unexpectedly displayed permissi
 - Data from other applications
 - Files managed by iCloud Drive
 
-This was investigated because the experiment was designed specifically to prevent the LLM from having unrestricted access to the local computer.
-
-### Observation
-
-The Python application only accesses the synthetic datasets used by the experiment:
-
-```text
-02-tool-calling/orders.json
-02-tool-calling/customers.json
-```
-
-Ollama communicates locally through:
-
-```text
-http://localhost:11434
-```
-
-No tool was implemented for arbitrary filesystem access.
-
-### Controlled Test
-
-The same program was executed directly from Terminal while Visual Studio Code was completely closed.
-
-The program executed successfully and no macOS permission popup appeared.
-
-This suggested that the behavior was related to the Visual Studio Code execution environment rather than the Tool Calling implementation itself.
-
-### TCC Investigation
-
-macOS TCC logs showed an access request associated with the Visual Studio Code code identity:
-
-```text
-com.microsoft.VSCode
-```
-
-The request referenced an Apple File Provider domain.
-
-Shortly afterwards, macOS resolved:
-
-```text
-com.apple.filesystems.netfs.PlugInLibraryService
-```
-
-as an XPC service associated with Visual Studio Code.
-
-No evidence was found in the relevant logs linking the request specifically to Copilot, Ollama, or Qwen.
-
-The exact operation that triggered the user-facing macOS popup was not conclusively identified.
-
-The issue will therefore remain under observation during subsequent experiments.
-
----
-
-## 🚀 Next Step
-
-The next experiment will introduce **Model Context Protocol (MCP)**.
-
-Instead of manually defining and orchestrating tools inside the Python application, we will investigate how tools and context can be exposed through a standardized protocol.
-
-The goal will be to move from:
-
-```text
-LLM
- ↓
-Python Application
- ↓
-Tool
- ↓
-Controlled Data
- ↓
-Result
- ↓
-LLM
- ↓
-Response
-```
-
-to a more standardized architecture based on:
-
-```text
-LLM
- ↓
-MCP Client
- ↓
-MCP Server
- ↓
-Tool / Resource
- ↓
-Result
- ↓
-LLM
- ↓
-Response
-```
