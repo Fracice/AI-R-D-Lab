@@ -5,3 +5,4 @@ __pycache__/
 .venv/
 03-mcp/.venv/
 04-rag/data/embeddings_cache.json
+05-sql-agent/data/sales.db
