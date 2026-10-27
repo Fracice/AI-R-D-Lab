@@ -1,0 +1,48 @@
+{
+  "company": "TechStore",
+  "currency": "EUR",
+  "sales": [
+    {
+      "product": "Laptop",
+      "category": "Electronics",
+      "units_sold": 45,
+      "unit_price": 1200,
+      "unit_cost": 850
+    },
+    {
+      "product": "Smartphone",
+      "category": "Electronics",
+      "units_sold": 120,
+      "unit_price": 800,
+      "unit_cost": 560
+    },
+    {
+      "product": "Monitor",
+      "category": "Electronics",
+      "units_sold": 75,
+      "unit_price": 300,
+      "unit_cost": 190
+    },
+    {
+      "product": "Headphones",
+      "category": "Accessories",
+      "units_sold": 200,
+      "unit_price": 80,
+      "unit_cost": 35
+    },
+    {
+      "product": "Keyboard",
+      "category": "Accessories",
+      "units_sold": 150,
+      "unit_price": 60,
+      "unit_cost": 25
+    },
+    {
+      "product": "Mouse",
+      "category": "Accessories",
+      "units_sold": 180,
+      "unit_price": 35,
+      "unit_cost": 12
+    }
+  ]
+}
